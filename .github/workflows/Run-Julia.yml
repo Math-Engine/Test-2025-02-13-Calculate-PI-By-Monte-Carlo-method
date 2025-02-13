@@ -21,4 +21,4 @@ jobs:
       with:
         version: '1.6'
     - name: Run calculate-PI-by-Monte-Carlo-method.jl
-      run: python calculate-PI-by-Monte-Carlo-method.jl ${{ github.event.inputs.numofpoint }}
+      run: julia calculate-PI-by-Monte-Carlo-method.jl ${{ github.event.inputs.numofpoint }}
