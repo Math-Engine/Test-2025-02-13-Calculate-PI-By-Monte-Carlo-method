@@ -10,15 +10,18 @@ getcontext().prec = 1000
 
 import random
 
-inside_circle = 0
+not_inside_circle = 0
 for i in range(0, number_of_point):
   coordinates = [random.uniform(0, 2), random.uniform(0, 2)]
   # print(coordinates)
-  if ( (((coordinates[0] - 1)**2) + ((coordinates[1] - 1)**2)) <= 1 ):
-    inside_circle = inside_circle + 1
+  if ( (((coordinates[0] - 1)**2) + ((coordinates[1] - 1)**2)) > 1 ):
+    not_inside_circle = not_inside_circle + 1
+
+inside_circle = number_of_point - not_inside_circle
 
 print(f"number_of_point : {number_of_point}")
 print(f"inside_circle : {inside_circle}")
+print(f"not_inside_circle : {not_inside_circle}")
 
 print("==========================================================================================")
 
