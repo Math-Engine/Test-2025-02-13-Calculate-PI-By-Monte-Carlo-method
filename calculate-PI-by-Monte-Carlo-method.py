@@ -23,3 +23,4 @@ print(f"inside_circle : {inside_circle}")
 print("==========================================================================================")
 
 fraction = Fraction(inside_circle * 4, number_of_point)
+print(Decimal(fraction.numerator) / Decimal(fraction.denominator))
