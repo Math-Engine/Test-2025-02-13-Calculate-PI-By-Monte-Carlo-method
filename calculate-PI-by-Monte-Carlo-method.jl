@@ -1,4 +1,4 @@
-number_of_point = ARGS[1]
+number_of_point = parse(Int, ARGS[1])
 
 global not_inside_circle = 0
 
