@@ -12,9 +12,7 @@ import random
 
 not_inside_circle = 0
 for i in range(0, number_of_point):
-  coordinates = [random.uniform(0, 2), random.uniform(0, 2)]
-  # print(coordinates)
-  if ( (((coordinates[0] - 1)**2) + ((coordinates[1] - 1)**2)) > 1 ):
+  if ( (((random.uniform(0, 2) - 1)**2) + ((random.uniform(0, 2) - 1)**2)) > 1 ):
     not_inside_circle = not_inside_circle + 1
 
 inside_circle = number_of_point - not_inside_circle
