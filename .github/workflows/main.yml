@@ -1,0 +1,24 @@
+name: Test-2025-02-13-Calculate-PI-By-Monte-Carlo-method
+
+on:
+  workflow_dispatch:
+    inputs:
+      numofpoint:
+        description: '무작위 좌표 개수'
+        required: true
+        default: '1000'
+        type: string
+
+run-name: Test-2025-02-13-Calculate-PI-By-Monte-Carlo-method [ ${{ github.event.inputs.numofpoint }} ]
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run calculate-PI-by-Monte-Carlo-method.py
+      run: python calculate-PI-by-Monte-Carlo-method.py ${{ github.event.inputs.numofpoint }}
