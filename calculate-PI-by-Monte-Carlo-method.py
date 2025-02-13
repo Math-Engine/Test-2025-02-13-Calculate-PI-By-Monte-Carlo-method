@@ -6,8 +6,9 @@ number_of_point = int(sys.argv[1])
 from decimal import Decimal, getcontext
 from fractions import Fraction
 
-import random
+getcontext().prec = 1000
 
+import random
 
 inside_circle = 0
 for i in range(0, number_of_point):
@@ -18,5 +19,7 @@ for i in range(0, number_of_point):
 
 print(f"number_of_point : {number_of_point}")
 print(f"inside_circle : {inside_circle}")
+
+print("==========================================================================================")
 
 fraction = Fraction(inside_circle * 4, number_of_point)
